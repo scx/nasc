@@ -252,6 +252,7 @@ std::string intern_calc (std::string input) {
     evalops.structuring = STRUCTURING_SIMPLIFY;
     //evalops.auto_post_conversion = POST_CONVERSION_BEST;
     evalops.keep_zero_units = false;
+    calc->useIntervalArithmetic (false);
     std::string res = calc->unlocalizeExpression (input, evalops.parse_options);
 
     mstruct = new MathStructure();
